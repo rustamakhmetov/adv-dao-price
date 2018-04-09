@@ -1,10 +1,10 @@
-var DAONameContract = artifacts.require("DAONameContract");
+var DAOContract = artifacts.require("DAOPriceContract");
 var DAOToken = artifacts.require("DAOToken");
 
 module.exports = function(deployer) {
     async function setContract() {
         let token = await DAOToken.deployed();
-        await token.setDAOContract(DAONameContract.address);
+        await token.setDAOContract(DAOContract.address);
         return true;
     }
 

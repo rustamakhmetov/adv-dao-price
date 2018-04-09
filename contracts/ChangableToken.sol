@@ -4,6 +4,6 @@ pragma solidity ^0.4.0;
 interface ChangableToken {
     function stop();
     function start();
-    function changeName(string name);
+    function changePrice(uint256 price);
     function balanceOf(address user) returns (uint256);
 }

@@ -7,7 +7,7 @@ import "./DAOBaseContract.sol";
 contract DAOPriceContract is DAOBaseContract {
 
     // Функция инициализации ( принимает адрес токена)
-    function DAONameContract(ChangableToken _token){
+    function DAOPriceContract(ChangableToken _token){
         token = _token;
     }
 

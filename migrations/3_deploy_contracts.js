@@ -1,6 +1,6 @@
-var DAONameContract = artifacts.require("DAONameContract");
+var DAOContract = artifacts.require("DAOPriceContract");
 var DAOToken = artifacts.require("DAOToken");
 
 module.exports = function(deployer) {
-    deployer.deploy(DAONameContract, DAOToken.address)
+    deployer.deploy(DAOContract, DAOToken.address)
 };

@@ -11,7 +11,7 @@ contract DAOBaseContract {
     uint8 public minVotes = 6;
 
     // Переменная для предложенного названия
-    string public proposalName;
+    uint256 public proposalPrice;
 
     // Переменная для хранения состояния голосования
     bool public voteActive = false;
@@ -40,11 +40,11 @@ contract DAOBaseContract {
     }
 
     // Функция для предложения нового символа
-    function newName(string _proposalName) public {
+    function newPrice(uint256 _proposalPrice) public {
 
         // Проверяем, что голосвание не идет
         require(!voteActive);
-        proposalName = _proposalName;
+        proposalPrice = _proposalPrice;
         voteActive = true;
 
         // Остановка работы токена
@@ -67,7 +67,7 @@ contract DAOBaseContract {
 
     function resetVoted() internal {
         // Сбрасываем все переменные для голосования
-        proposalName = "";
+        proposalPrice = 0;
         election.numberOfVotes = 0;
         election.current = 0;
         voteActive = false;

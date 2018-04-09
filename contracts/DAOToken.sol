@@ -108,8 +108,8 @@ contract DAOToken is Stoppable {
     }
 
     // Функция для смены названия токена
-    function changeName(string _name) onlyDAO public {
-        name = _name;
+    function changePrice(uint256 _price) onlyDAO public { //
+        buyPrice = _price;
     }
 
 }
